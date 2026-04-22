@@ -5,9 +5,49 @@ Carrinho
 {% endblock %}
 
 {% block estilo %}
-  
+<link rel="stylesheet" href="{{ url_for('static', filename='stylepagamento.css') }}">  
 {% endblock %}
 
 {% block content %}
-        
+
+  <div class="titulo-compra">{Compras}</div>
+
+  <main>
+    <div class="compra-container">
+      <img src="../assets/livro-casas-estranhas.jpg.png" alt="Capa do Livro" class="livro-img">
+
+      <div class="detalhes">
+        <h2 id="titulo-livro">Casas Estranhas: <br> Casas Estranhas Vol. 1</h2>
+        <div class="preco">
+          <h3 id="preco-livro">Valor: R$40,92</h3>
+          <span id="frete-livro">frete grátis</span>
+        </div>
+        <button class="botao"
+          data-titulo="Casas Estranhas Vol. 1"
+          data-preco="R$40,92"
+          data-frete="frete grátis">
+          Confirmar Pagamento!
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const botao = document.querySelector('.botao');
+
+    botao.addEventListener('click', function () {
+      const titulo = this.dataset.titulo;
+      const preco = this.dataset.preco;
+      const frete = this.dataset.frete;
+
+      this.classList.add('animar');
+      setTimeout(() => this.classList.remove('animar'), 500);
+
+      alert(`📚 Compra confirmada!\n\nLivro: ${titulo}\nPreço: ${preco}\n${frete}\n\nObrigado por comprar na Livraria Marginalia!`);
+
+      setTimeout(() => {
+        window.location.href = "area_livros.html";
+      }, 1200);
+    });
+  </script>       
 {% endblock %}
