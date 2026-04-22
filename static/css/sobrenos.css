@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'PP Mondwest';
+    src: url(../../assets/PPMONDWEST-REGULAR.OTF);
+  }
+  
+  @font-face {
+    font-family: 'PP Neuebit';
+    src: url(../../assets/PPNEUEBIT-BOLD.OTF);
+    
+  }
+
+    body {
+      font-family: 'PP Mondwest', serif;
+      background: #E8DDCB;
+      
+    }
+    
+    .container {
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      color: #1c2b1d;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .intro {
+      text-align: left;
+      max-width: 700px;
+      margin-top: -15px;
+      font-size: 1.5em;
+      margin-left: 15px;
+      line-height: 1.6;
+      font-family: 'PP Mondwest';    
+  }
+    .intro p{
+      font-size: 20px;
+      margin-left: 6px;
+    }
+
+    .intro h2 {
+      font-weight: normal;
+      font-size: 42px;
+    }
+
+    .timeline {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: 90px auto;
+
+    }
+    
+    .timeline-line {
+      height: 22px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background: linear-gradient(to right, #005c30, #d9d9d9);
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .events {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .event {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid #005c30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #005c30;
+      font-family: 'PP Mondwest';
+      font-size: 18px;
+      background: #e8ddcb;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      z-index: 2;
+    }
+    
+    .circle:hover {
+      background: #005c30;
+      color: #e8ddcb;
+    }
+    
+    /* tooltip com o texto */
+    .circle::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #005c30;
+      color: #e8ddcb;
+      font-size: 14px;
+      padding: 6px 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .event:nth-child(even) .circle::after {
+      bottom: auto;
+      top: 70px;
+    }
+    
+    .circle:hover::after {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-5px);
+    }
+       
+    /* linha dos circulos */
+    .event::after {
+      content: "";
+      width: 2px;
+      height: 60px;
+      background: #005c30;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .event:nth-child(odd) {
+      flex-direction: column;
+      transform: translateY(-50px); /* sobe ímpares */
+    }
+    
+    .event:nth-child(odd)::after {
+      top: auto;
+      bottom: -40px;
+    }
+    
+    .event:nth-child(even) {
+      flex-direction: column-reverse;
+      transform: translateY(60px);
+    }
+    
+    .event:nth-child(even)::after {
+      top: -10px;
+      bottom: auto;
+    }
+    
+    .metrics {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-content: center;
+      margin-top: 10px;
+      font-family: 'PP Mondwest'; 
+      color: #005c30;
+    }
+
+    .metric {
+      text-align: center;
+      align-items: center;
+      font-family: 'PP Mondwest';
+      color: #005c30;
+    }
+    
+    .metric .numero {
+      font-size: 54px; 
+    }
+    
+    .metric p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    blockquote {
+      position: relative;
+      color: #1c2b1d;
+      font-family: 'PP Mondwest';
+      font-size: 24px;
+      margin: 30px auto;
+      padding: 20px 60px;
+      display: inline-block;
+      max-width: 70%;
+      text-align: left;
+    }
+
+    
+    /* aspas */
+    blockquote::before,
+    blockquote::after {
+      font-family: 'PP Mondwest';
+      font-size: 98px; /* reduzido e proporcional */
+      color: #005c30;
+      position: absolute;
+    }
+    
+    blockquote::before {
+      content: "“";
+      left: 40px;
+      top: 65%;
+      transform: translate(-60%, -50%);
+    }
+    
+    blockquote::after {
+      content: "”";
+      right: 40px;
+      top: 65%;
+      transform: translate(60%, -50%);
+    }
+
+    .contato {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .divisor {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      display: block;
+      margin-right: -55%;
+      align-items: center;
+    }
+    
+.carta {
+  background: #E8DDCB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+  position: relative;
+  margin-left: 270px;
+  font-family: 'PP Mondwest';
+}
+
+.carta #escreva {
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: #1c2b1d;
+  text-decoration: underline;
+  text-decoration-color: #115B35;
+  text-underline-offset: 6px;
+  text-align: center;
+}
+
+.carimbo {
+  width: 115px;
+}
+
+.info-contato {
+  font-size: 18px;
+  color: #1c2b1d;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.icones-redes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.icones-redes .icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #115B35;
+  border-radius: 50%;
+}
+      
+      .icones-redes .icone img {
+        width: 28px;
+        height: auto;
+      }
+
+      .icones-redes .icone #tuiter {
+        width: 36px;
+        height: auto;
+      }
+      
+      .icones-redes .icone:hover {
+        background: #115B35;
+        color: #f3ecdf;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+
+      .icones-redes .icone:hover img {
+        filter: brightness(0) invert(1);
+      }
+      
+    
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .metrics {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .events {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .circle {
+        width: 60px;
+        height: 60px;
+      }
+
+    }
