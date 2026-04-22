@@ -5,9 +5,35 @@ Login
 {% endblock %}
 
 {% block estilo %}
-  
+<link rel="stylesheet" href="{{ url_for('static', filename='stylelogin.css') }}">  
 {% endblock %}
 
 {% block content %}
+
+ <a href="javascript:history.back()" class="voltar"> ← Voltar </a>
+    <div class="main-container">
+        <div class="Caixa_de_login">
+            <h1 class="Titulo">{Livraria Marginália}</h1>
+            <p class="subtitulo">Junte-se à nossa comunidade literária</p>
+            <div class="formulario">
+                <form id="loginForm">
+                    <br>
+                    <div class="input">
+                        <input type="text" id="nome" placeholder="  Nome completo:" required>
+                    </div>
+                    <div class="input">
+                        <input type="email" id="email" placeholder="  Email:" required>
+                    </div>
+                    <div class="input">
+                        <input type="password" id="senha" placeholder="  Senha:" required>
+                    </div>
+                    <button type="submit" class="Botão_de_login">Login</button>
+                    <p class="novo">Novo por aqui? <a href="area_cadastro.html">Cadastre-se</a></p>
+                </form>
+            </div>
+        </div>
+
+        <script src="scripts/script_tela_de_login.js"></script>
+    </div>
         
 {% endblock %}
