@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'PP Mondwest';
+  src: url(../../assets/PPMONDWEST-REGULAR.OTF);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PP Neuebit';
+  src: url(../../assets/PPNEUEBIT-BOLD.OTF);
+  font-weight: normal;
+}
+
+#corpo {
+  font-family: 'PP Mondwest';
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.titulo-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10px 20px 10px;
+}
+
+.titulo-barra h1 {
+  font-family: 'PP Mondwest';
+  font-weight: normal;
+  font-size: clamp(1.5rem, 4vw, 42px);
+  color: #000000;
+}
+
+.pesquisa input {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  font-size: 1rem;
+  max-width: 250px;
+  width: 100%;
+}
+
+.categorias {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  justify-content: center; 
+}
+
+.categorias button {
+  background-color: #115B35;
+  color: white;
+  font-family: 'PP Mondwest';
+  padding: 8px 29px;
+  border: none;
+  border-radius: 20px;
+  font-size: clamp(0.9rem, 2vw, 20px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categorias button:hover {
+  background-color: #115B35;
+  transform: translateY(-1px);
+  box-shadow: 
+    0 5px 0 #0e4228,
+    0 8px 12px rgba(17,91,53,0.3);
+}
+
+.categorias button:active {
+  transform: translateY(0.3px);
+  box-shadow: 
+    0 2px 0 #0e4228,
+    0 3px 6px rgba(17,91,53,0.3);
+}
+
+.livros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.livros-grid img {
+  height: clamp(180px, 25vw, 220px); 
+  width: auto;
+  object-fit: cover;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.livros-grid img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .titulo-barra {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categorias {
+    gap: 10px;
+  }
+  
+  .categorias button {
+    padding: 6px 14px;
+  }
+}
