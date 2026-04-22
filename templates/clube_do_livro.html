@@ -5,10 +5,72 @@ Clube do livro
 {% endblock %}
 
 {% block estilo %}
-  
+<link rel="stylesheet" href="{{ url_for('static', filename='styleclube.css') }}">
 {% endblock %}
 
 {% block content %}
+
+ <header>
+        <div>
+        <a id="link_landing" href="landing_page.html">
+            <img src="../assets/Logo.png" alt="Logo" id="logo">
+            </a>
+        </div>
+        <nav>
+          <a class="cabeca" href="area_login.html">Login</a>
+          <a class="cabeca" href="area_livros.html">Área de Livros</a>
+          <a class="cabeca" href="clube_do_livro.html">Clube do Livro</a>
+          <a class="cabeca" href="sobre_nos.html">Sobre nós</a>
+        </nav>
+      </header>
+    <main>
+      <div class="main-content">
+        <div class="titulo">
+          <h1>{Clube do Livro}</h1>
+          <div class="subtitulo">
+            <h2>Leitura mensal com comentário, encontros e conversa.</h2>
+          </div>
+        </div>     
+        <a href="#" class="botao-entrar">Entrar no clube</a>
+      </div>
+      <div class="livrodomês">
+        <h1>Livro do mês</h1>
+        <h2><span id="autor">Narcisa Amália</span> - Nebulosas</h2>   
+           
+        <div class="livro-citacao">
+          <img src="../assets/image 14.png" id="narcisinha">
+          <blockquote class="citação">
+            <span>Um dia no meu peito o desalento</span><br>
+            <span>Cravou sangrenta garra; trevas densas</span><br>
+            <span>Nublaram-me o horizonte, onde brilhava</span><br>
+            <span>A matutina estrela do futuro.</span>
+          </blockquote>
+        </div>
+        <div class="resenha_grid"><a href="erro_404.html" class="botao-resenha"> Ver resenha</a>
+      </div>
+      <section class="livros-anteriores">
+        <h2>Livros anteriores</h2>
+      <div class="grid-livros">
+        <a href=""> <img src="../assets/81-m2B4F9hL._SY466_ 1.png" alt="Livro 1"/></a>
+         <a href=""><img src="../assets/andresa 1.png" alt="Livro 2"/></a>
+         <a href=""><img src="../assets/crimeycastigo.jpg" alt="Livro 3"/></a>
+         <a href=""><img src="../assets/image 8.png" alt="Livro 4"/></a>
+         <a href=""><img src="../assets/image 9.png" alt="Livro 5"/></a>
+         <a href=""><img src="../assets/imagens_estranhas.jpg" alt="Livro 6"/></a>
+         <a href=""><img src="../assets/casas_estranhas2.png" alt="Livro 7"/></a>
+         <a href=""><img src="../assets/radio.jpg" alt="Livro 8"/></a>
+       </div>
+      </section>
+
+      </main>  
+      <footer>
+        <div>42 rua lamartine – bairro quiferno, quixeramobim, ce</div>
+        <div>marginalia@gmail.com</div>
+        <div>© livraria marginália</div>
+      </footer>
+   
+<script src="scripts/script_clube.js"></script>
+<script src="scripts/modo_escuro.js"></script>
         
 {% endblock %}
 
