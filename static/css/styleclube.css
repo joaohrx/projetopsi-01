@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'PP Mondwest';
+    src: url(../../assets/PPMONDWEST-REGULAR.OTF);
+  }
+  
+  @font-face {
+    font-family: 'PP Neuebit';
+    src: url(../../assets/PPNEUEBIT-BOLD.OTF);
+  }
+
+
+.titulo {
+    font-family: 'PP Mondwest';
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: normal;
+}
+
+.titulo h1 {
+    font-weight: normal;
+}
+
+.subtitulo {
+    font-family: 'PP Mondwest';
+    margin-top: 8px;
+    align-items: flex-start;
+    color: #000;
+    margin-left: 2px;
+}
+
+.subtitulo h2 {
+    font-family: 'PP Neuebit';
+    font-size: 24px;
+    color: #000;
+    margin-left: 4px;
+    font-weight: normal;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.botao-entrar {
+    width: 150px;
+    height: 45px;
+    background-color: #115B35;
+    color: #fff;
+    font-family: 'PP Neuebit';
+    font-size: 22px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    margin-right: 65px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+}
+
+.botao-entrar:hover {
+  background-color: #115B35;
+  transform: translateY(-1.5px);
+  box-shadow: 
+    0 5px 0 #0e4228,
+    0 8px 12px rgba(17,91,53,0.3);
+}
+
+.botao-entrar:hover:active {
+  transform: translateY(0.5px);
+  box-shadow: 
+    0 2px 0 #0e4228,
+    0 3px 6px rgba(17,91,53,0.3);
+}
+
+.botao-entrar.clicado {
+    background-color: #5E6238;
+    width: 50px;
+    height: 50px;
+    margin-right: 100px;
+    border-radius: 100%;
+    line-height: 60px;
+    padding: 0;
+}
+
+.livrodomês {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.livrodomês h1 {
+    font-family: 'PP Mondwest';
+    font-weight: normal;
+    color: #000;
+    margin-right: 70px;
+    font-size: 50px;
+
+}
+
+.livrodomês h2 {
+    font-family: 'PP Mondwest';
+    font-weight: normal;
+    color: #000;
+    font-size: 30px;
+}
+
+#autor {
+    color: #115B35
+}
+
+.livro-citacao {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .livrodomês #narcisinha {
+    height: 280px;
+    width: 315px;
+    border: #6A7A49 solid 9px;
+    border-radius: 18px;
+    margin-left: 340px;
+    margin-bottom: 20px;
+  }
+  
+  .citação {
+    position: relative;
+    color: #1c2b1d;
+    font-family: 'PP Mondwest';
+    font-size: 21px;
+    line-height: 1.6;
+    max-width: 320px;
+    padding: 20px 40px;
+    margin: 0;
+  }
+  
+  .citação::before,
+  .citação::after {
+    font-family: 'PP Mondwest';
+    font-size: 120px;
+    color: #115B35;
+    position: absolute;
+  }
+  
+  .citação::before {
+    content: "“";
+    left: 0;
+    top: -40px;
+  }
+  
+  .citação::after {
+    content: "”";
+    right: 0;
+    bottom: -90px;
+  }
+
+  .botao-resenha {
+    width: 150px;
+    height: 45px;
+    background-color: #115B35;
+    color: #fff;
+    font-family: 'PP Neuebit';
+    font-size: 22px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+}
+
+.botao-resenha:hover {
+  background-color: #115B35;
+  transform: translateY(-1px);
+  box-shadow: 
+    0 5px 0 #0e4228,
+    0 8px 12px rgba(17,91,53,0.3);
+}
+
+.botao-resenha:hover:active {
+  transform: translateY(0.3px);
+  box-shadow: 
+    0 2px 0 #0e4228,
+    0 3px 6px rgba(17,91,53,0.3);
+}
+
+
+
+.resenha_grid {
+  display: flex;
+  align-items: center;
+  
+}
+
+.livros-anteriores {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.livros-anteriores h2 {
+  font-family: 'PP Mondwest';
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.grid-livros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7.5px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.grid-livros img {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15), 
+  0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-livros img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12),
+  0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
