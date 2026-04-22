@@ -8,27 +8,36 @@ def index():
     
     return render_template('index.html')
 
-@app.route('/cadastro')
+@app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
 
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        senha = request.form.get('senha')
+        telefone = request.form.get('telefone')
+        endereco = request.form.get('endereco')
+        data_de_nascimento = request.form.get('data_de_nascimento')
 
-    nome= request.form.get('nome')
-    email=request.form.get('email')
-    senha=request.form.get('senha')
-    telefone=request.form.get('telefone')
-    endereco=request.form.get('endereco')
-    data_de_nascimento=request.form.get('data_de_nascimento')
+        if not nome or not email or not senha:
+            return redirect(url_for('cadastro'))
+        
+        return redirect(url_for('login')) 
+
+    return render_template('cadastro.html')
 
 
-
-
-
-    return render_template ('cadastro.html',nome=nome,email=email,senha=senha,telefone=telefone,endereco=endereco,data_de_nascimento=data_de_nascimento)
-
-
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
 
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        senha = request.form.get('senha')
+
+        if nome and senha:
+            return redirect(url_for('dashboard'))
+
+        return redirect(url_for('login'))
 
     return render_template('login.html')
 
