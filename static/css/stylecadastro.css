@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'PP Mondwest';
-    src: url(../../assets/PPMONDWEST-REGULAR.OTF);
+    src: url(static/fontes/PPMondwest-Regular.OTF);
   }
   
   @font-face {
     font-family: 'PP Neuebit';
-    src: url(../../assets/PPNEUEBIT-BOLD.OTF);
+    src: url(static/fontes/PPNeueBit-Bold.OTF);
   }
 
   @font-face {
     font-family: 'Neue Haas';
-    src: url(../../assets/NEUEHAASGROTDISP-55ROMAN-TRIAL.OTF);
+    src: url(static/fontes/NEUEHAASGROTDISP-55ROMAN-TRIAL.OTF);
     }
 
 
@@ -44,7 +44,7 @@ body.light-theme {
 
 .voltar {
     color: #E8DDCB;
-    font-family: 'PP Neuebit', sans-serif;
+    font-family: 'PP Neuebit';
     font-size: 20px;
     text-decoration: none;
     position: absolute;
