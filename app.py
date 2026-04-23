@@ -17,9 +17,7 @@ def cadastro():
         nome = request.form.get('nome')
         email = request.form.get('email')
         senha = request.form.get('senha')
-        telefone = request.form.get('telefone')
-        endereco = request.form.get('endereco')
-        data_de_nascimento = request.form.get('data_de_nascimento')
+     
 
         if not nome or not email or not senha:
             return redirect(url_for('cadastro'))
@@ -65,17 +63,10 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route('/area_livros')
-def area_livros():
 
 
-    return render_template('area_livros.html')
 
-
-@app.route('/carrinho')
-def carrinho():
-    
-    return render_template('carrinho.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
+
