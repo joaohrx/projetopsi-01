@@ -52,7 +52,7 @@ def dashboard():
     if not logado:
         return redirect(url_for('login'))
 
-    return render_template('dashboard.html')
+    return render_template('area_livros.html')
 
 
 
