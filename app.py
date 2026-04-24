@@ -63,6 +63,11 @@ def logout():
     return redirect(url_for('login'))
 
 
+@app.route('/sobrenos')
+def sobrenos():
+    return render_template('sobre_nos.html')
+
+
 
 
 

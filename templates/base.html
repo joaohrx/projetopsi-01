@@ -19,17 +19,16 @@
     
 
     <header>
-      <a id="link_landing" href="landing_page.html">
+      <a id="link_landing" href="index.html">
         <img src="../assets/Logo.png" alt="Logo" id="logo">
       </a>
       <nav>
         <button id="toggle-darkmode">
           <img src="../assets/lua.svg" id="solelua">
         </button>
-        <a class="cabeca" href="area_login.html">Login</a>
-        <a class="cabeca" href="area_livros.html">Área de Livros</a>
-        <a class="cabeca" href="clube_do_livro.html">Clube do Livro</a>
-        <a class="cabeca" href="sobre_nos.html">Sobre nós</a>
+        <a class="cabeca" href="{{url_for('login')}}">Login</a>
+        <a class="cabeca" href="{{url_for('dashboard') }}">Área de Livros</a>
+        <a class="cabeca" href="{{url_for('sobrenos')}}">Sobre nós</a>
       </nav>
       </header>
     {% block content %}
