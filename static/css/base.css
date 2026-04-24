@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'PP Mondwest';
-  src: url(static/fontes/assets/PPMONDWEST-REGULAR.OTF);
+  src: url(static/fontes/PPMONDWEST-REGULAR.OTF);
 }
 
 @font-face {
   font-family: 'PP Neuebit';
-  src: url(static/fontes/assets/PPNEUEBIT-BOLD.OTF);
+  src: url(static/fontes/PPNEUEBIT-BOLD.OTF);
 }
 
 :root {
@@ -32,3 +32,70 @@
   --altura-linha: 2px;
   --offset-linha: -4px;
 }
+
+.cabeca {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-family: 'PP Neuebit';
+  font-size: 20px;
+  margin-left: 2rem;
+  position: relative;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+#link_landing {
+  margin-left: 0;
+}
+
+.cabeca::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #f0f0f0;
+  transition: width 0.3s ease;
+}
+
+.cabeca:hover::after {
+  width: 100%;
+}
+
+header {
+  background-color: #115B35;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'PP Neuebit', sans-serif;
+  max-height: 60px;
+}
+
+header #logo {
+  height: 28px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: #115B35;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'PP Mondwest';
+  max-height: 60px;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  min-height: calc(100vh - 60px);
+}
+
