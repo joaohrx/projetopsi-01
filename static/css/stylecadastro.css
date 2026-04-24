@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'PP Mondwest';
-    src: url(../../assets/PPMONDWEST-REGULAR.OTF);
+    src: url(static/fontes/PPMONDWEST-REGULAR.OTF);
   }
   
   @font-face {
     font-family: 'PP Neuebit';
-    src: url(../../assets/PPNEUEBIT-BOLD.OTF);
+    src: url(static/fontes/PPNEUEBIT-BOLD.OTF);
   }
 
   @font-face {
     font-family: 'Neue Haas';
-    src: url(../../assets/NEUEHAASGROTDISP-55ROMAN-TRIAL.OTF);
+    src: url(static/fontes//NEUEHAASGROTDISP-55ROMAN-TRIAL.OTF);
     }
 
 
