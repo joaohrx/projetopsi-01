@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
 </head>
 <body>
-
-    {% block content %}
+    
 
     <header>
       <a id="link_landing" href="landing_page.html">
@@ -33,16 +32,15 @@
         <a class="cabeca" href="sobre_nos.html">Sobre nós</a>
       </nav>
       </header>
-      
-      
+    {% block content %}
+
+    {% endblock %}         
+
        <footer>
         <div>42 rua lamartine – bairro quiferno, quixeramobim, ce</div>
         <div>marginalia@gmail.com</div>
         <div>© livraria marginália</div>
       </footer>
       <script src="scripts/modo_escuro.js"></script>
-
-    {% endblock %}
-    
 </body>
 </html>
