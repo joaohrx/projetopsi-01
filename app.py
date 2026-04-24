@@ -51,7 +51,7 @@ def dashboard():
     if not logado:
         return redirect(url_for('login'))
 
-    return render_template('dashboard.html')
+    return render_template('area_livros.html')
 
 
 
@@ -60,6 +60,11 @@ def logout():
     global logado
     logado = False
     return redirect(url_for('login'))
+
+
+@app.route('/sobrenos')
+def sobrenos():
+    return render_template('sobre_nos.html')
 
 
 
