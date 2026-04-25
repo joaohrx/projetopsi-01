@@ -1,0 +1,200 @@
+@font-face {
+  font-family: 'PP Mondwest';
+  src: url(static/css/PPMONDWEST-REGULAR.OTF);
+}
+
+@font-face {
+  font-family: 'PP Neuebit';
+  src: url(static/css/PPNEUEBIT-BOLD.OTF);
+}
+@font-face {
+  font-family: 'PP copper';
+  src: url(static/css/copperplategothic_bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #E8DDCB;
+    color: #f0f0f0;
+  }
+  .cabeca {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-family: 'PP Neuebit';
+    font-size: 20px;
+    margin-left: 2rem;
+    position: relative;
+    transition: color 0.3s;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 0;
+  }
+
+  #link_landing {
+    margin-left: 0;
+  }
+
+  .cabeca::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #f0f0f0;
+    transition: width 0.3s ease;
+  }
+  
+  .cabeca:hover::after {
+    width: 100%;
+  }
+  nav {
+    float: right;
+  }
+  nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  .top-bar {
+    font-family: 'Mondwest', serif;
+  }
+  .pagina {
+    font-size: 35px;
+    font-style: normal;
+    font-family: 'PP Mondwest';
+    padding: 20px 0;
+    color: black;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .livro {
+    width: 65%;
+  }
+  .livro-box {
+    display: flex;
+    gap: 20px;
+  }
+  .capa {
+    width: 200px;
+    height: auto;
+  }
+  .info h2 {
+    color: #115B35;
+    margin-bottom: 10px;
+    font-family: 'PP copper';
+  }
+  .autor {
+    font-size: 14px;
+    color: #6A7A49;
+    font-family: 'PP copper';
+  }
+  .preco {
+    font-size: 30px;
+    color: #115B35;
+    margin: 10px 0;
+    font-family: 'PP copper';
+  }
+  .descricao {
+    margin: 10px 0;
+    line-height: 1.5;
+    font-family: 'PP Mondwest';
+    color: black;
+  }
+  .comprar {
+    background-color: #6A7A49;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'PP Mondwest';
+    border-radius: 10px;
+  }
+  .carrinho {
+    background-color: #6A7A49;
+    color: #fff;
+    border: 1px solid #999;
+    padding: 8px 8px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .sidebar {
+    width: 30%;
+    background-color: #E8DDCB;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100%;
+    border-left: 10px solid #115B35;
+    color: black;
+    font-family: 'PP copper';
+  }
+  .sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .recomendacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .livro-recomendado img {
+    width: 100px;
+    height: auto;
+  }
+  .livro-recomendado p {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 15px;
+    }
+    .sidebar {
+      width: 100%;
+    }
+    .livro-box {
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar {
+      border-left: none;
+      border-top: 5px solid #4A5D23;
+      margin-top: 20px;
+    }
+    .capa {
+      width: 150px;
+    }
+    header, nav, .pagina {
+      text-align: center;
+    }
+    nav {
+      float: none;
+      margin-top: 10px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 10px;
+    }
+  }
