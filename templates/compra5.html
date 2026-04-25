@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Carrinho
+{% endblock %}
+
+{% block estilo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/stylepagamentos.css') }}">  
+{% endblock %}
+
+{% block content %}
+
+  <div class="titulo-compra">{Compras}</div>
+
+  <main>
+    <div class="compra-container">
+      <img src="static/img/image 9.png" alt="Capa do Livro" class="livro-img">
+
+      <div class="detalhes">
+        <h2 id="titulo-livro">Ainda Estou Aqui</h2>
+        <div class="preco">
+          <h3 id="preco-livro">Valor: R$60,32</h3>
+          <span id="frete-livro">frete grátis</span>
+        </div>
+        <button class="botao"
+          data-titulo="Ainda Estou Aqui"
+          data-preco="R$60,32"
+          data-frete="frete grátis">
+          Confirmar Pagamento!
+        </button>
+  </main>
+
+  <script>
+  const botao = document.querySelector('.botao');
+
+    botao.addEventListener('click', function () {
+      const titulo = this.dataset.titulo;
+      const preco = this.dataset.preco;
+      const frete = this.dataset.frete;
+
+      this.classList.add('animar');
+      setTimeout(() => this.classList.remove('animar'), 500);
+
+      alert(`📚 Compra confirmada!\n\nLivro: ${titulo}\nPreço: ${preco}\n${frete}\n\nObrigado por comprar na Livraria Marginalia!`);
+
+      
+    });
+  </script>       
+{% endblock %}
