@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'PP Mondwest';
-  src: url(static/css/PPMONDWEST-REGULAR.OTF);
+  src: url(../fontes/PPMONDWEST-REGULAR.OTF);
 }
 
 @font-face {
   font-family: 'PP Neuebit';
-  src: url(static/css/PPNEUEBIT-BOLD.OTF);
+  src: url(../fontes/PPNEUEBIT-BOLD.OTF);
 }
 @font-face {
   font-family: 'PP copper';
-  src: url(static/css/copperplategothic_bold.ttf);
+  src: url(../fontes/copperplategothic_bold.ttf);
 }
 
 * {

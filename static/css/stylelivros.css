@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'PP Mondwest';
-  src: url(static/fontes/PPMONDWEST-REGULAR.OTF);
+  src: url(../fontes/PPMONDWEST-REGULAR.OTF);
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'PP Neuebit';
-  src: url(static/fontes/PPNEUEBIT-BOLD.OTF);
+  src: url(../fontes/PPNEUEBIT-BOLD.OTF);
   font-weight: normal;
 }
 
