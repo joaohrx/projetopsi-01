@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Descrição
+{% endblock %}
+
+{%block estilo %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styledetalhes.css') }}">
+{% endblock %}
+
+{% block content%}
+   <main>
+    <div class="container">
+      
+      
+      <section class="livro">
+        <p class="pagina">{Página do Livro}</p>
+        <div class="livro-box">
+          <img src="static/img/imagens_estranhas.jpg" alt="Capa do Livro" class="capa">
+          <div class="info">
+            <h2>Imagens Estranhas</h2>
+            <p class="autor">UKETSU (autor) <br> JEFERSON JOSÉ TEIXEIRA (tradutor)</p>
+            <p class="preco">R$25,72</p>
+            <p class="descricao">
+              Nesta obra perturbadora e fascinante,
+              Uketsu apresenta uma coletânea visual
+              e narrativa de imagens e histórias bizarras,
+              inquietantes e sobrenaturais. Com traços que
+              beiram o grotesco e uma atmosfera surreal, o
+              livro é ideal para quem aprecia o horror
+              sicológico e o desconforto visual como forma de arte.
+            </p>
+            <a href="{{url_for('compra6')}}"><button class="comprar">COMPRAR</button></a>
+            <button class="carrinho">🛒 </button>
+
+          </div>
+        </div>
+      </section>
+
+     
+      <aside class="sidebar">
+        <h3>CLIENTES QUE COMPRARAM ESTE ITEM TAMBÉM COMPRARAM:</h3>
+        <div class="recomendacoes">
+          <div class="livro-recomendado">
+            <img src="static/img/casas_estranhas2.png" alt="Livro 1">
+            <p>Casas Estranhas 2</p>
+            <p>R$ 40,50</p>
+          </div>
+          <div class="livro-recomendado">
+            <img src="static/img/imagens_estranhas.jpg" alt="Livro 2">
+            <p>Imagens Estranhas</p>
+            <p>R$ 40,50</p>
+          </div>
+          <div class="livro-recomendado">
+            <img src="static/img/radio.jpg" alt="Livro 3">
+            <p>Radio</p>
+            <p> R$40,90</p>
+          </div>
+          
+        </div>
+      </aside>
+
+    </div>
+  </main>
+{% endblock %}

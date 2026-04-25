@@ -107,6 +107,39 @@ def compra7():
 def compra8():
     return render_template('compra8.html')
 
+@app.route('/descricao1')
+def desc1():
+    return render_template('desc1.html')
+
+@app.route('/descricao2')
+def desc2():
+    return render_template('desc2.html')
+
+@app.route('/descricao3')
+def desc3():
+    return render_template('desc3.html')
+
+@app.route('/descricao4')
+def desc4():
+    return render_template('desc4.html')
+
+@app.route('/descricao5')
+def desc5():
+    return render_template('desc5.html')
+
+@app.route('/descricao6')
+def desc6():
+    return render_template('desc6.html')
+
+@app.route('/descricao7')
+def desc7():
+    return render_template('desc7.html')
+
+@app.route('/descricao8')
+def desc8():
+    return render_template('desc8.html')
+
+
 
 
 if __name__ == "__main__":
