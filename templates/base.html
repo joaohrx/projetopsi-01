@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}"> -->
     <title>
         {% block title %}
             
@@ -18,7 +18,7 @@
 <body>
     
 
-    <header>
+    <!-- <header>
       <a id="link_landing" href="index.html">
         <img src="static/img/Logo.png" alt="Logo" id="logo">
       </a>
@@ -27,16 +27,16 @@
         <a class="cabeca" href="{{url_for('dashboard') }}">Área de Livros</a>
         <a class="cabeca" href="{{url_for('sobrenos')}}">Sobre nós</a>
       </nav>
-      </header>
+      </header> -->
     {% block content %}
 
     {% endblock %}         
 
-       <footer>
+     <!-- <footer>
         <div>42 rua lamartine – bairro quiferno, quixeramobim, ce</div>
         <div>marginalia@gmail.com</div>
         <div>© livraria marginália</div>
-      </footer>
+      </footer>  -->
     
 </body>
 </html>

@@ -1,12 +1,13 @@
 @font-face {
-    font-family: 'PP Mondwest';
-    src: url(static/fontes/PPMONDWEST-REGULAR.OTF);
-  }
-  
-  @font-face {
-    font-family: 'PP Neuebit';
-    src: url(static/fontes/PPNEUEBIT-BOLD.OTF);
-  }
+    font-family: 'Mondwest';
+    src: url('../fontes/PPMondwest-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'NeueBit';
+    src: url('../fontes/PPNeueBit-Bold.otf') format('opentype');
+}
+
 
   @font-face {
     font-family: 'Neue Haas';
@@ -91,14 +92,14 @@ body {
     text-align: center;
     font-size: 35px;
     font-weight: normal;
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
     padding-top: 9%;
 }
 
 .subtitulo {
     color: var(--text-color); 
     text-align: center;
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
     font-size: 20px;
     padding-top: 3%;
 }
@@ -107,7 +108,7 @@ body {
     background-color: var(--button-bg-color);
     color: var(--button-text-color); 
     border: var(--button-bg-color); 
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
     font-size: 22px;
 }
 
@@ -222,7 +223,7 @@ body {
     font-size: 0.85em;
     color: var(--text-color); 
     margin-left: 12%;
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
 }
 
 .login a {

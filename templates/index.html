@@ -1,13 +1,44 @@
 {% extends 'base.html'%}
 
 {% block title %}
-Index
+Boas vindas
 {% endblock %}
 
 {% block estilo %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styleindex.css') }}">
   
 {% endblock %}
 
 {% block content %}
+
+
+    <div class="container">
+        <h1>Bem-vindo ao Marginalia 📖</h1>
+
+        <p>
+            O <strong>Marginalia</strong> é um espaço criado para quem valoriza ideias,
+            organização e expressão. Aqui, você pode registrar, explorar e dar vida
+            aos seus pensamentos de forma simples e eficiente.
+        </p>
+
+        <p>
+            Crie sua conta para começar sua jornada e aproveitar todos os recursos
+            da plataforma. Se você já faz parte da comunidade, basta acessar sua conta
+            e continuar exatamente de onde parou.
+        </p>
+
+        <a href="{{'cadastro'}}" class="btn btn-cadastro">
+            Criar Conta
+        </a>
+
+        <a href="{{'login'}}" class="btn btn-login">
+            Já tenho conta
+        </a>
+    </div>
+
+
+
+
         
 {% endblock %}
