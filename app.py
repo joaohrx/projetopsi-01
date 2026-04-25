@@ -1,13 +1,14 @@
-from flask import Flask, render_template,request,redirect,url_for
+from flask import Flask, render_template,request,redirect,url_for, session
 
 app = Flask(__name__)
+app.secret_key = "1234"
 
-logado = False
-
+usuarios = []
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
@@ -21,6 +22,12 @@ def cadastro():
         if not nome or not email or not senha:
             return redirect(url_for('cadastro'))
         
+        usuarios.append({
+            "nome":nome,
+            "email": email,
+            "senha": senha
+        })
+        
         return redirect(url_for('login')) 
 
     return render_template('cadastro.html')
@@ -29,35 +36,38 @@ def cadastro():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    global logado
 
     if request.method == 'POST':
-        nome = request.form.get('nome')
-        email= request.form.get('email')
+
+        email = request.form.get('email')
         senha = request.form.get('senha')
 
-        if nome and email and senha:
-            logado = True
-            return redirect(url_for('dashboard'))
+        for usuario in usuarios:
 
-        return redirect(url_for('login'))
+            if usuario["email"] == email and usuario["senha"] == senha:
+
+                session['logado'] = True
+                session['usuario'] = usuario["nome"]
+
+                return redirect(url_for('dashboard'))
+
+        return redirect(url_for('cadastro'))
 
     return render_template('login.html')
 
 
 @app.route('/dashboard')
 def dashboard():
-    if not logado:
+    if not session.get('logado'):
         return redirect(url_for('login'))
 
-    return render_template('area_livros.html')
+    return render_template('area_livros.html',usuario=session.get('usuario'))
 
 
 
 @app.route('/logout')
 def logout():
-    global logado
-    logado = False
+    session.clear()
     return redirect(url_for('login'))
 
 
@@ -96,11 +106,6 @@ def compra7():
 @app.route('/compra8')
 def compra8():
     return render_template('compra8.html')
-
-
-
-
-
 
 
 
