@@ -328,7 +328,7 @@ body {
 
 }
 
-@media (min-width:1600px) {
+@media (min-width:1600px){
      .Caixa_de_login {
         max-width: 95%;
         margin-left: 31%;
