@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/base.css') }}">
+
     <title>
         {% block title %}
-            
         {% endblock %}
     </title>
 
     {% block estilo %}
-        
     {% endblock %}
-
 </head>
+
 <body>
-    
 
     <header>
       <a id="link_landing" href="index.html">
@@ -29,8 +30,19 @@
       </nav>
       </header>
     {% block content %}
+        <a id="link_landing" href="{{ url_for('index') }}">
+            <img
+              src="{{ url_for('static', filename='img/Logo.png') }}"
+              alt="Logo"
+              id="logo">
+        </a>
 
-    {% endblock %}         
+        <nav>
+            <a class="cabeca" href="{{ url_for('login') }}">Login</a>
+            <a class="cabeca" href="{{ url_for('dashboard') }}">Área de Livros</a>
+            <a class="cabeca" href="{{ url_for('sobrenos') }}">Sobre nós</a>
+        </nav>
+    </header>
 
      <footer>
         <div>42 rua lamartine – bairro quiferno, quixeramobim, ce</div>
@@ -38,5 +50,16 @@
         <div>© livraria marginália</div>
       </footer>
      
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <div>42 rua lamartine – bairro quiferno, quixeramobim, ce</div>
+        <div>marginalia@gmail.com</div>
+        <div>© livraria marginália</div>
+    </footer>
+
 </body>
 </html>

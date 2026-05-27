@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'PP Mondwest';
+  font-family: 'Mondwest';
   src: url(../fontes/PPMONDWEST-REGULAR.OTF);
 }
 
 @font-face {
-  font-family: 'PP Neuebit';
+  font-family: 'Neuebit';
   src: url(../fontes/PPNEUEBIT-BOLD.OTF);
 }
 @font-face {
-  font-family: 'PP copper';
+  font-family: 'Copper';
   src: url(../fontes/copperplategothic_bold.ttf);
 }
 
@@ -25,7 +25,7 @@
   .cabeca {
     color: #f0f0f0;
     text-decoration: none;
-    font-family: 'PP Neuebit';
+    font-family: 'Neuebit';
     font-size: 20px;
     margin-left: 2rem;
     position: relative;
@@ -70,7 +70,7 @@
   .pagina {
     font-size: 35px;
     font-style: normal;
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
     padding: 20px 0;
     color: black;
   }
@@ -93,23 +93,23 @@
   .info h2 {
     color: #115B35;
     margin-bottom: 10px;
-    font-family: 'PP copper';
+    font-family: 'Copper';
   }
   .autor {
     font-size: 14px;
     color: #6A7A49;
-    font-family: 'PP copper';
+    font-family: 'Copper';
   }
   .preco {
     font-size: 30px;
     color: #115B35;
     margin: 10px 0;
-    font-family: 'PP copper';
+    font-family: 'Copper';
   }
   .descricao {
     margin: 10px 0;
     line-height: 1.5;
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
     color: black;
   }
   .comprar {
@@ -119,7 +119,7 @@
     padding: 10px 30px;
     font-size: 16px;
     cursor: pointer;
-    font-family: 'PP Mondwest';
+    font-family: 'Mondwest';
     border-radius: 10px;
   }
   .carrinho {
@@ -144,7 +144,7 @@
     min-height: 100%;
     border-left: 10px solid #115B35;
     color: black;
-    font-family: 'PP copper';
+    font-family: 'Copper';
   }
   .sidebar h3 {
     font-size: 18px;

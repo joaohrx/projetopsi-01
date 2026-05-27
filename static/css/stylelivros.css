@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'PP Mondwest';
+  font-family: 'Mondwest';
   src: url(../fontes/PPMONDWEST-REGULAR.OTF);
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'PP Neuebit';
+  font-family: 'Neuebit';
   src: url(../fontes/PPNEUEBIT-BOLD.OTF);
   font-weight: normal;
 }
 
 #corpo {
-  font-family: 'PP Mondwest';
+  font-family: 'Mondwest';
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -31,7 +31,7 @@
 }
 
 .titulo-barra h1 {
-  font-family: 'PP Mondwest';
+  font-family: 'Mondwest';
   font-weight: normal;
   font-size: clamp(1.5rem, 4vw, 42px);
   color: #000000;
@@ -57,7 +57,7 @@
 .categorias button {
   background-color: #115B35;
   color: white;
-  font-family: 'PP Mondwest';
+  font-family: 'Mondwest';
   padding: 8px 29px;
   border: none;
   border-radius: 20px;
