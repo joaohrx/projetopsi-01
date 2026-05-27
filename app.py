@@ -1,9 +1,12 @@
-from flask import Flask, render_template,request,redirect,url_for, session
+from flask import Flask, render_template,request,redirect,url_for, session, flash
+
+from db import criar_conexao, inicializar
 
 app = Flask(__name__)
 app.secret_key = "1234"
 
-usuarios = []
+
+inicializar()
 
 @app.route('/')
 def index():
@@ -17,16 +20,23 @@ def cadastro():
         nome = request.form.get('nome')
         email = request.form.get('email')
         senha = request.form.get('senha')
-     
 
+        conexao = criar_conexao()
+     
+        resultado = conexao.execute("SELECT * FROM usuarios WHERE email = ?", (email,))
+
+        usuario = resultado.fetchone()
         if not nome or not email or not senha:
             return redirect(url_for('cadastro'))
         
-        usuarios.append({
-            "nome":nome,
-            "email": email,
-            "senha": senha
-        })
+        if not usuario:
+            conexao.execute("INSERT INTO usuarios(email,nome,senha) VALUES (?,?,?)", (email,nome,senha))
+            conexao.commit()
+            conexao.close()
+        else:
+            flash('Usuario já cadastrado')
+            return redirect(url_for('cadastro'))
+           
         
         return redirect(url_for('login')) 
 
@@ -38,21 +48,26 @@ def cadastro():
 def login():
 
     if request.method == 'POST':
-
+        nome = request.form.get('nome')
         email = request.form.get('email')
         senha = request.form.get('senha')
 
-        for usuario in usuarios:
+        conexao = criar_conexao()
+        resultado = conexao.execute("SELECT * FROM usuarios WHERE email = ?", (email,))
+        
+        usuario = resultado.fetchone()
+        conexao.close()
+           
+        if usuario and usuario["email"] == email and usuario['nome'] == nome and usuario["senha"] == senha:
 
-            if usuario["email"] == email and usuario["senha"] == senha:
+            session['logado'] = True
+            session['usuario'] = usuario["nome"]
 
-                session['logado'] = True
-                session['usuario'] = usuario["nome"]
-
-                return redirect(url_for('dashboard'))
-
-        return redirect(url_for('cadastro'))
-
+            return redirect(url_for('dashboard'))
+        
+        flash("erro de login")
+        return redirect(url_for('login'))
+        
     return render_template('login.html')
 
 
