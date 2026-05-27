@@ -5,10 +5,21 @@
 {% endblock %}
 
 {% block content %}
+
 <body>
+
 
     <div class="main-container">
         <div class="Caixa_de_login">
+            {% with mensagens = get_flashed_messages() %}
+            {% if mensagens %}
+              <div class="alerta">
+           {% for mensagem in mensagens %}
+              <p>{{ mensagem }}</p>
+            {% endfor %}
+              </div>
+           {% endif %}
+           {% endwith %}
 
             <h1 class="Titulo">{Livraria Marginália}</h1>
             <p class="subtitulo">Junte-se à nossa comunidade literária</p>
