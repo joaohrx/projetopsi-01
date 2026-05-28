@@ -159,6 +159,7 @@ def compra8():
 
 @app.route('/descricao1')
 def desc1():
+    
     if not session.get('logado'):
         return redirect(url_for('login'))
     
@@ -166,6 +167,7 @@ def desc1():
 
 @app.route('/descricao2')
 def desc2():
+
     if not session.get('logado'):
         return redirect(url_for('login'))
     
@@ -173,6 +175,7 @@ def desc2():
 
 @app.route('/descricao3')
 def desc3():
+
     if not session.get('logado'):
         return redirect(url_for('login'))
     
@@ -180,22 +183,42 @@ def desc3():
 
 @app.route('/descricao4')
 def desc4():
+
+    if not session.get('logado'):
+        return redirect(url_for('login'))
+    
     return render_template('desc4.html')
 
 @app.route('/descricao5')
 def desc5():
+
+    if not session.get('logado'):
+        return redirect(url_for('login'))
+    
     return render_template('desc5.html')
 
 @app.route('/descricao6')
 def desc6():
+
+    if not session.get('logado'):
+        return redirect(url_for('login'))
+    
     return render_template('desc6.html')
 
 @app.route('/descricao7')
 def desc7():
+
+    if not session.get('logado'):
+        return redirect(url_for('login'))
+    
     return render_template('desc7.html')
 
 @app.route('/descricao8')
 def desc8():
+
+    if not session.get('logado'):
+        return redirect(url_for('login'))
+    
     return render_template('desc8.html')
 
 
