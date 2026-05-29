@@ -1,16 +1,15 @@
 @font-face {
-    font-family: 'PP Mondwest';
-    src: url(static/fontes/PPMONDWEST-REGULAR.OTF);
-  }
-  
-  @font-face {
-    font-family: 'PP Neuebit';
-    src: url(static/fontes/assets/PPNEUEBIT-BOLD.OTF);
-    
-  }
+  font-family: 'Mondwest';
+  src: url(../fontes/PPMONDWEST-REGULAR.OTF);
+}
+
+@font-face {
+  font-family: 'Neuebit';
+  src: url(../fontes/PPMONDWEST-REGULAR.OTF);
+}
 
     body {
-      font-family: 'PP Mondwest', serif;
+      font-family: 'Mondwest', serif;
       background: #E8DDCB;
       
     }
@@ -31,7 +30,7 @@
       font-size: 1.5em;
       margin-left: 15px;
       line-height: 1.6;
-      font-family: 'PP Mondwest';    
+      font-family: 'Mondwest';    
   }
     .intro p{
       font-size: 20px;
@@ -88,7 +87,7 @@
       align-items: center;
       justify-content: center;
       color: #005c30;
-      font-family: 'PP Mondwest';
+      font-family: 'Mondwest';
       font-size: 18px;
       background: #e8ddcb;
       position: relative;
@@ -171,14 +170,14 @@
       flex-wrap: wrap;
       align-content: center;
       margin-top: 10px;
-      font-family: 'PP Mondwest'; 
+      font-family: 'Mondwest'; 
       color: #005c30;
     }
 
     .metric {
       text-align: center;
       align-items: center;
-      font-family: 'PP Mondwest';
+      font-family: 'Mondwest';
       color: #005c30;
     }
     
@@ -194,7 +193,7 @@
     blockquote {
       position: relative;
       color: #1c2b1d;
-      font-family: 'PP Mondwest';
+      font-family: 'Mondwest';
       font-size: 24px;
       margin: 30px auto;
       padding: 20px 60px;
@@ -207,7 +206,7 @@
     /* aspas */
     blockquote::before,
     blockquote::after {
-      font-family: 'PP Mondwest';
+      font-family: 'Mondwest';
       font-size: 98px; /* reduzido e proporcional */
       color: #005c30;
       position: absolute;
@@ -251,7 +250,7 @@
   width: 100%;
   position: relative;
   margin-left: 270px;
-  font-family: 'PP Mondwest';
+  font-family: 'Mondwest';
 }
 
 .carta #escreva {

@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Mondwest';
-  src: url(../fontes/PPMONDWEST-REGULAR.OTF);
+  src: url(../fontes/PPMondwest-Regular.otf);
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Neuebit';
-  src: url(../fontes/PPNEUEBIT-BOLD.OTF);
+  src: url(../fontes/PPNeueBit-Bold.otf);
   font-weight: normal;
 }
 
@@ -23,10 +23,7 @@
 }
 
 .titulo-barra {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0 10px 20px 10px;
 }
 
