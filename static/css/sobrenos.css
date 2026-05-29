@@ -207,7 +207,7 @@
     blockquote::before,
     blockquote::after {
       font-family: 'Mondwest';
-      font-size: 98px; /* reduzido e proporcional */
+      font-size: 98px;
       color: #005c30;
       position: absolute;
     }

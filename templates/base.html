@@ -20,20 +20,16 @@
 <body>
 
     <header>
-        <a id="link_landing" href="{{ url_for('index') }}">
-            <img
-              src="{{ url_for('static', filename='img/Logo.png') }}"
-              alt="Logo"
-              id="logo">
-        </a>
-
-        <nav>
-            <a class="cabeca" href="{{ url_for('login') }}">Login</a>
-            <a class="cabeca" href="{{ url_for('dashboard') }}">Área de Livros</a>
-            <a class="cabeca" href="{{ url_for('sobrenos') }}">Sobre nós</a>
-        </nav>
-    </header>
-
+      <a id="link_landing" href="index.html">
+        <img src="static/img/Logo.png" alt="Logo" id="logo">
+      </a>
+      <nav>
+        <a class="cabeca" href="{{url_for('login')}}">Login</a>
+        <a class="cabeca" href="{{url_for('dashboard') }}">Área de Livros</a>
+        <a class="cabeca" href="{{url_for('sobrenos')}}">Sobre nós</a>
+      </nav>
+      </header>
+     
     <main>
         {% block content %}
         {% endblock %}

@@ -1,8 +1,4 @@
-{% extends 'base.html'%}
-
-{% block title %}
-Área de livros
-{% endblock %}
+<title>Cadastro</title>
 
 {% block estilo %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/stylecadastro.css') }}">
@@ -10,7 +6,18 @@
 
 {% block content %}
 
+
+
 <div class="main-container">
+    {% with mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+      <div class="alerta">
+    {% for mensagem in mensagens %}
+        <p>{{ mensagem }}</p>
+    {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
 
     <div class="Caixa_de_login">
         <h1 class="Titulo">{Livraria Marginália}</h1>
